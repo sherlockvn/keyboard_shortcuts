@@ -142,12 +142,12 @@ class _KeyBoardShortcuts extends State<KeyBoardShortcuts> {
 
         //verify if element is visible or not
         List<_KeyBoardShortcuts> toRemove = [];
-        _keyBoardShortcuts.forEach((element) {
-          if (VisibilityDetectorController.instance.widgetBoundsFor(element.key) == null) {
-            element.listening = false;
-            toRemove.add(element);
-          }
-        });
+        // _keyBoardShortcuts.forEach((element) {
+        //   if (VisibilityDetectorController.instance.widgetBoundsFor(element.key) == null) {
+        //     element.listening = false;
+        //     toRemove.add(element);
+        //   }
+        // });
 
         _keyBoardShortcuts.removeWhere((element) => toRemove.contains(element));
         _keyBoardShortcuts.forEach((element) {
